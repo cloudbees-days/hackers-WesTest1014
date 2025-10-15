@@ -1,6 +1,6 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
-RUN apk add --no-cache jq
+RUN apk add --no-cache jq bash
 COPY package*.json ./
 RUN npm ci
 COPY . .
